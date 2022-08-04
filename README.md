@@ -1,10 +1,10 @@
 # posts_clean
 
-A new Flutter project.
+A posts app.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Playing out with clean architecture in flutter.
 
 A few resources to get you started if this is your first Flutter project:
 
