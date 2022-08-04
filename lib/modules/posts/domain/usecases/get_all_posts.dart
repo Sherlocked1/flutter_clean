@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:posts_clean/core/error/failures.dart';
-import 'package:posts_clean/posts/domain/repositories/posts_repositories.dart';
+import '../repositories/posts_repositories.dart';
 
 import '../entities/post.dart';
 

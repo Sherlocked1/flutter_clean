@@ -9,7 +9,6 @@ class OfflineFailure extends Failure {
   OfflineFailure({required super.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -17,7 +16,6 @@ class ServerFailure extends Failure {
   ServerFailure({required super.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -25,6 +23,5 @@ class EmptyCacheFailure extends Failure {
   EmptyCacheFailure({required super.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }

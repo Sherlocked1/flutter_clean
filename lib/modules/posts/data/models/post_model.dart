@@ -1,19 +1,20 @@
 import 'package:equatable/equatable.dart';
+import 'package:posts_clean/modules/posts/domain/entities/post.dart';
 
-class PostModel extends Equatable {
+class PostDTO extends Post {
   final int userId;
   final int id;
   final String title;
   final String body;
 
-  const PostModel({
+  const PostDTO({
     required this.userId,
     required this.id,
     required this.title,
     required this.body,
-  });
+  }) : super(id: id, title: title, body: body);
 
-  factory PostModel.fromJson(Map<String, dynamic> json) => PostModel(
+  factory PostDTO.fromJson(Map<String, dynamic> json) => PostDTO(
         userId: json["userId"],
         id: json["id"],
         title: json["title"],
