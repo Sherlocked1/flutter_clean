@@ -40,10 +40,10 @@ class PostsRemoteDataSourceImp implements PostsRemoteDataSource {
 
   @override
   Future<PostDTO> addPost(PostDTO post) async {
-    final body = {
+    final body = json.encode({
       "title": post.title,
       "body": post.body,
-    };
+    });
     final url = Uri.parse(BASE_URL + "/posts");
     try {
       final response =

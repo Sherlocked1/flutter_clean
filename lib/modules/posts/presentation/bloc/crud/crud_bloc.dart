@@ -23,12 +23,15 @@ class CrudBloc extends Bloc<CrudEvent, CrudState> {
       : super(CrudInitial()) {
     on<CrudEvent>((event, emit) async {
       if (event is AddPostEvent) {
+        emit(CrudLoadingState());
         final result = await addPost(event.post);
         emit(getState(result, isUpdate: false));
       } else if (event is DeletePostEvent) {
+        emit(CrudLoadingState());
         final result = await deletePost(event.id);
         emit(getStateForDelete(result));
       } else if (event is UpdatePostEvent) {
+        emit(CrudLoadingState());
         final result = await updatePost(event.post);
         emit(getState(result, isUpdate: true));
       }
