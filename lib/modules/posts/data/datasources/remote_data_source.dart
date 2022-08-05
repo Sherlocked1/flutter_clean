@@ -77,10 +77,10 @@ class PostsRemoteDataSourceImp implements PostsRemoteDataSource {
 
   @override
   Future<PostDTO> updatePost(PostDTO post) async {
-    final body = {
+    final body = json.encode({
       "title": post.title,
       "body": post.body,
-    };
+    });
     final url = Uri.parse(BASE_URL + "/posts/${post.id.toString()}");
     try {
       final response = await client.put(url, body: body, headers: BASE_HEADERS);

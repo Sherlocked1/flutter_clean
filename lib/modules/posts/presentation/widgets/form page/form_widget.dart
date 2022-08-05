@@ -22,14 +22,14 @@ class FormWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         TextField(
-          controller: titleController,
+          controller: titleController..text = isUpdatePost ? post!.title : "",
           decoration: InputDecoration(hintText: "Title"),
         ),
         SizedBox(
           height: 10,
         ),
         TextField(
-          controller: bodyController,
+          controller: bodyController..text = isUpdatePost ? post!.body : "",
           decoration: InputDecoration(hintText: "Body"),
           minLines: 6,
           maxLines: 7,
